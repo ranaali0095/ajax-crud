@@ -1,19 +1,4 @@
-function objetoAjax() {
-    var xmlhttp = false;
-    try {
-        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-    } catch (e) {
-        try {
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        } catch (E) {
-            xmlhttp = false;
-        }
-    }
-    if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
-        xmlhttp = new XMLHttpRequest();
-    }
-    return xmlhttp;
-}
+
 function Register(idP, currentAction) {
     name = document.userData.name.value;
     console.log(name);
@@ -31,7 +16,7 @@ function Register(idP, currentAction) {
     // formData = new FormData();
     // formData.append('avatar', avatar,;
     // console.log(formData);
-    ajax = objetoAjax();
+    ajax = new XMLHttpRequest();
 
 
     if (currentAction == 'N') {
